@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Taskplanner"
+             xmlns:converters="clr-namespace:Taskplanner.Converters"
+             x:Class="Taskplanner.App">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Importera våra konverterare -->
+            <converters:CompletedToColorConverter x:Key="CompletedToColorConverter" />
+            <converters:CompletedToIconConverter x:Key="CompletedToIconConverter" />
+            <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
+            <converters:DateToVisibilityConverter x:Key="DateToVisibilityConverter" />
+            <converters:FilterToColorConverter x:Key="FilterToColorConverter" />
+            <converters:FilterToTextColorConverter x:Key="FilterToTextColorConverter" />
+            
+            <!-- Färgresurser -->
+            <Color x:Key="PrimaryColor">#6200EE</Color>
+            <Color x:Key="PrimaryDarkColor">#3700B3</Color>
+            <Color x:Key="SecondaryColor">#03DAC6</Color>
+            <Color x:Key="DangerColor">#FF5252</Color>
+            
+            <!-- Ljust tema -->
+            <Color x:Key="PageBackgroundColorLight">#F5F5F5</Color>
+            <Color x:Key="CardBackgroundColorLight">#FFFFFF</Color>
+            <Color x:Key="PrimaryTextColorLight">#212121</Color>
+            <Color x:Key="SecondaryTextColorLight">#757575</Color>
+            <Color x:Key="TertiaryTextColorLight">#9E9E9E</Color>
+            <Color x:Key="InputBackgroundColorLight">#FAFAFA</Color>
+            <Color x:Key="SeparatorColorLight">#E0E0E0</Color>
+            
+            <!-- Mörkt tema -->
+            <Color x:Key="PageBackgroundColorDark">#121212</Color>
+            <Color x:Key="CardBackgroundColorDark">#1E1E1E</Color>
+            <Color x:Key="PrimaryTextColorDark">#FFFFFF</Color>
+            <Color x:Key="SecondaryTextColorDark">#BBBBBB</Color>
+            <Color x:Key="TertiaryTextColorDark">#888888</Color>
+            <Color x:Key="InputBackgroundColorDark">#2D2D2D</Color>
+            <Color x:Key="SeparatorColorDark">#333333</Color>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

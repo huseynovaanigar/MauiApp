@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Taskplanner.MainPage"
+             Title="Hem"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25">
+
+            <!-- Header Section -->
+            <StackLayout Spacing="15">
+                <Label Text="📝 Task Planner"
+                       FontSize="32"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="{DynamicResource PrimaryTextColor}" />
+
+                <Label Text="Organisera ditt liv, en uppgift i taget!"
+                       FontSize="16"
+                       HorizontalOptions="Center"
+                       TextColor="{DynamicResource SecondaryTextColor}" />
+            </StackLayout>
+            
+
+            <!-- Navigation Cards -->
+            <StackLayout Spacing="15">
+                <Frame BackgroundColor="{DynamicResource PrimaryColor}"
+                       Padding="20"
+                       CornerRadius="15"
+                       HasShadow="True">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <StackLayout Grid.Column="0" Spacing="5">
+                            <Label Text="Mina Uppgifter"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="White" />
+                            <Label Text="Hantera alla dina uppgifter"
+                                   FontSize="14"
+                                   TextColor="White"
+                                   Opacity="0.9" />
+                        </StackLayout>
+                        
+                        <Button Grid.Column="1"
+                                Text="➡️"
+                                BackgroundColor="Transparent"
+                                TextColor="White"
+                                FontSize="20"
+                                Clicked="OnGoToTasksPageClicked"
+                                CornerRadius="20"
+                                WidthRequest="50"
+                                HeightRequest="50" />
+                    </Grid>
+                </Frame>
+
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
